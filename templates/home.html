@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Crypto</h2>
+
+<table>
+  <tr>
+    <th>Name </th>
+    <th>Price</th>
+    <th>1h %</th>
+    <th>2h %</th>
+    <th>7d %</th>
+    <th>Market Cap</th>
+    <th>Volume</th>
+    <th>Supply</th>
+
+  </tr>
+  {% for item in items %}
+  <tr>
+    <td>{{item.name}}</td>
+    <td>{{item.price}}</td>
+    <td>{{item.one_hour_per}}</td>
+    <td>{{item.twenty_four_hour_per}}</td>
+    <td>{{item.seven_day_per}}</td>
+    <td>{{item.market_cap}}</td>
+    <td>{{item.volume}}</td>
+    <td>{{item.supply}}</td>
+
+  </tr>
+  {% endfor %}
+  
+  
+</table>
+
+</body>
+</html>
+
